@@ -1,4 +1,4 @@
-package com.example.demoapp.network.model.utils
+package com.example.demoapp.network.utils
 
 sealed class ItemResult<out R> {
     data class Success<out T>(val data: T) : ItemResult<T>()

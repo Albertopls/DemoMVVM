@@ -1,14 +1,12 @@
 package com.example.demoapp.presentation.ui.pokemonList
 
-import android.util.Log
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.demoapp.network.model.Pokemon
-import com.example.demoapp.network.model.utils.ItemResult
-import com.example.demoapp.network.model.utils.PokemonResult
-import com.example.demoapp.network.model.utils.Status
+import com.example.demoapp.network.utils.ItemResult
+import com.example.demoapp.network.utils.PokemonResult
 import com.example.demoapp.repository.PokemonRepository
 import kotlinx.coroutines.launch
 

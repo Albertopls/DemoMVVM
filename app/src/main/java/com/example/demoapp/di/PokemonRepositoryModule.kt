@@ -1,6 +1,6 @@
 package com.example.demoapp.di
 
-import com.example.demoapp.network.model.PokemonService
+import com.example.demoapp.network.PokemonService
 import com.example.demoapp.repository.PokemonRepository
 import com.example.demoapp.repository.PokemonRepository_Impl
 import dagger.Module

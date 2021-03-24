@@ -1,9 +1,8 @@
 package com.example.demoapp.repository
 
 import com.example.demoapp.network.model.Pokemon
-import com.example.demoapp.network.model.PokemonService
-import com.example.demoapp.network.model.utils.ItemResult
-import com.example.demoapp.network.model.utils.Status
+import com.example.demoapp.network.PokemonService
+import com.example.demoapp.network.utils.ItemResult
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

@@ -1,4 +1,4 @@
-package com.example.demoapp.network.model.utils
+package com.example.demoapp.network.utils
 
 data class PokemonResult<out T>(val status: Status, val data: T?, val message: String?){
     companion object {

@@ -2,7 +2,7 @@ package com.example.demoapp.presentation.ui.pokemonList
 
 import androidx.lifecycle.ViewModel
 import com.example.demoapp.network.model.Result
-import com.example.demoapp.network.model.utils.SingleLiveData
+import com.example.demoapp.network.utils.SingleLiveData
 
 class OnclickPokemonViewModel : ViewModel(){
 

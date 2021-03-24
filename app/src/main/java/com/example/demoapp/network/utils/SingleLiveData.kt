@@ -1,4 +1,4 @@
-package com.example.demoapp.network.model.utils
+package com.example.demoapp.network.utils
 
 import androidx.annotation.MainThread
 import androidx.lifecycle.LifecycleOwner

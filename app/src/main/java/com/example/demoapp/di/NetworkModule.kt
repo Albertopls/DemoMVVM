@@ -1,6 +1,6 @@
 package com.example.demoapp.di
 
-import com.example.demoapp.network.model.PokemonService
+import com.example.demoapp.network.PokemonService
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides

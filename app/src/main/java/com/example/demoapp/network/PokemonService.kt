@@ -1,7 +1,7 @@
-package com.example.demoapp.network.model
+package com.example.demoapp.network
 
+import com.example.demoapp.network.model.Pokemon
 import retrofit2.http.GET
-import kotlin.Result
 
 interface PokemonService {
 

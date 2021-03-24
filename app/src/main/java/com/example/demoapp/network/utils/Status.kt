@@ -1,4 +1,4 @@
-package com.example.demoapp.network.model.utils
+package com.example.demoapp.network.utils
 
 enum class Status {
     SUCCESS,

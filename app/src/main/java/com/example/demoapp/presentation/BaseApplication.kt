@@ -1,4 +1,4 @@
-package com.example.demoapp.presentation.ui
+package com.example.demoapp.presentation
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
