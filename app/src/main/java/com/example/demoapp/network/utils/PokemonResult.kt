@@ -1,5 +1,8 @@
 package com.example.demoapp.network.utils
 
+// TODO: What is a data class?
+// TODO: Why should this be declared as a data class?
+// Read this docs: https://kotlinlang.org/docs/data-classes.html 😉
 data class PokemonResult<out T>(val status: Status, val data: T?, val message: String?){
     companion object {
         fun <T> success(data: T?): PokemonResult<T> =

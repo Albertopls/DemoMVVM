@@ -32,6 +32,7 @@ class PokemonAdapter(val result:List<Result>, val onPokemonClicked : (result: Re
 
     override fun getItemCount(): Int = result.size
 
+    // TODO: Keep attention to android warnings -> In the following line you should use the get method with Indexing 😉
     override fun onBindViewHolder(holder: PokemonViewHolder, position: Int) = holder.bind(result = result.get(position))
 
 }

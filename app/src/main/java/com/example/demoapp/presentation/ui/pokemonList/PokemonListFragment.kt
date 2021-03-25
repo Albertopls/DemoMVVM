@@ -17,6 +17,9 @@ import com.example.demoapp.presentation.ui.adapters.PokemonAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_pokemon_list.*
 
+// TODO: Always follow Kotlin formatting conventions: 😉 https://kotlinlang.org/docs/coding-conventions.html#formatting
+// TODO: To facilitate this, try to always use code indentation shortcut 😉 https://stackoverflow.com/a/16580200
+
 @AndroidEntryPoint
 class PokemonListFragment : Fragment() {
 
@@ -49,11 +52,10 @@ class PokemonListFragment : Fragment() {
                     }
 
                      Status.ERROR -> {
-
-
+                         // Try to handle this error with a Snackbar or a Toast.
                     }
                      Status.LOADING -> {
-
+                         // Do not implement unused states whenever possible.
 
                     }
                 }

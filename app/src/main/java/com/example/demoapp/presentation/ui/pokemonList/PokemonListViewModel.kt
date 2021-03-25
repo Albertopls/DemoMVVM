@@ -10,7 +10,8 @@ import com.example.demoapp.network.utils.PokemonResult
 import com.example.demoapp.repository.PokemonRepository
 import kotlinx.coroutines.launch
 
-
+// TODO: Always follow Kotlin formatting conventions: 😉 https://kotlinlang.org/docs/coding-conventions.html#formatting
+// TODO: To facilitate this, try to always use code indentation shortcut 😉 https://stackoverflow.com/a/16580200
 
 class PokemonListViewModel
 @ViewModelInject

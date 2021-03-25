@@ -8,6 +8,9 @@ import java.util.concurrent.atomic.AtomicBoolean
 
 class SingleLiveData<T> : MutableLiveData<T>() {
 
+    // TODO: What is an AtomicBoolean property?
+    // TODO: Why should this be an AtomicBoolean?
+    // TODO: Could this be a simple Boolean? Why or Why not?
     private val pending = AtomicBoolean()
 
     /**

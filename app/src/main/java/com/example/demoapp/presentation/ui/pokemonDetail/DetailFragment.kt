@@ -27,7 +27,7 @@ class DetailFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view  = inflater.inflate(R.layout.fragment_detail, container, false)
-
+        // TODO: Do you really need the variable view? 😉
         return view
     }
 
