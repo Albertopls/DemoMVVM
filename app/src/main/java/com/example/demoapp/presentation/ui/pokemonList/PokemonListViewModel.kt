@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.demoapp.network.model.Pokemon
 import com.example.demoapp.network.utils.ItemResult
 import com.example.demoapp.network.utils.PokemonResult
+import com.example.demoapp.network.utils.Status
 import com.example.demoapp.repository.PokemonRepository
 import kotlinx.coroutines.launch
 
@@ -15,7 +16,7 @@ import kotlinx.coroutines.launch
 
 class PokemonListViewModel
 @ViewModelInject
-    constructor(val pokemonRepository: PokemonRepository): ViewModel(){
+constructor(val pokemonRepository: PokemonRepository) : ViewModel() {
     var result: MutableLiveData<PokemonResult<Pokemon>> = MutableLiveData()
 
     init {
@@ -23,29 +24,30 @@ class PokemonListViewModel
 
     }
 
-    fun loadPokemons(){
+    fun loadPokemons() {
 
         viewModelScope.launch {
 
             val res = try {
                 pokemonRepository.searchPokemon()
-            }catch (exception:Exception){
+            } catch (exception: Exception) {
                 ItemResult.Error(exception)
             }
 
             when (res) {
                 is ItemResult.Success<Pokemon> ->
-                    result.value = PokemonResult.success(data = res.data)
+                    result.value = PokemonResult.Success(data = res.data)
                 is ItemResult.Error ->
-                    result.value = res.exception.message?.let { PokemonResult.error(data = null, message = it) }
+                    result.value = res.exception.message?.let { PokemonResult.Error(message = it) }
             }
 
         }
 
 
-        }
+    }
+
     fun getPokemons(): MutableLiveData<PokemonResult<Pokemon>> {
-        return  result
+        return result
     }
 
 }

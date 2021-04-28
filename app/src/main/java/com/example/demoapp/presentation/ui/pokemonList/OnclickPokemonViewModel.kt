@@ -9,14 +9,14 @@ import com.example.demoapp.network.utils.SingleLiveData
 
 class OnclickPokemonViewModel : ViewModel(){
 
-    var pokemon: SingleLiveData<Result> = SingleLiveData()
+    var item: SingleLiveData<Int> = SingleLiveData()
 
-    fun onClickItem(item: Result){
-        pokemon.value = item
+    fun onClickItem(index: Int){
+        item.value = index
     }
 
-    fun getPokemonClicked(): SingleLiveData<Result>{
+    fun getPokemonClicked(): SingleLiveData<Int>{
 
-        return pokemon
+        return item
     }
 }

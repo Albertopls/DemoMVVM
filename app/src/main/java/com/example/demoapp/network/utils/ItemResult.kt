@@ -5,5 +5,8 @@ package com.example.demoapp.network.utils
 // Read this docs: https://kotlinlang.org/docs/sealed-classes.html 😉
 sealed class ItemResult<out R> {
     data class Success<out T>(val data: T) : ItemResult<T>()
+
+    data class Loading<out T>(val data: T?): ItemResult<T>()
+
     data class Error(val exception: Exception) : ItemResult<Nothing>()
 }

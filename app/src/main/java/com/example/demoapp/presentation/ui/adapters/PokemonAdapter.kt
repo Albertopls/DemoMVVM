@@ -8,7 +8,7 @@ import com.example.demoapp.R
 import com.example.demoapp.network.model.Result
 import kotlinx.android.synthetic.main.item_pokemon.view.*
 
-class PokemonAdapter(val result:List<Result>, val onPokemonClicked : (result: Result) -> Unit):
+class PokemonAdapter(val result:List<Result>, val onPokemonClicked : (index: Int) -> Unit):
         RecyclerView.Adapter<PokemonAdapter.PokemonViewHolder>() {
 
     class PokemonViewHolder(itemView:View): RecyclerView.ViewHolder(itemView){
@@ -23,8 +23,9 @@ class PokemonAdapter(val result:List<Result>, val onPokemonClicked : (result: Re
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PokemonViewHolder {
 
         val holder = PokemonViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_pokemon,parent,false))
+
         holder.itemView.item_pokemon_cv_container.setOnClickListener {
-            onPokemonClicked.invoke(result.get(holder.adapterPosition))
+            onPokemonClicked.invoke(holder.adapterPosition+1)
         }
         return holder
 

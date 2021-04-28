@@ -6,12 +6,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.ui.pokemonDetail.DetailFragment">
 
-    <TextView
-        android:id="@+id/frgament_detail_txt_name"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:textSize="50sp"
-        android:gravity="center"
+    <ProgressBar
+        android:id="@+id/fragment_detail_pgb_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <ImageView
+        android:id="@+id/frgament_detail_img_pokemon"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
